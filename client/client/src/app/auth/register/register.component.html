@@ -1,0 +1,59 @@
+<div class="login-page">
+  <h2>Registration</h2>
+  <h3>Already have an account? <a routerLink="/login">Login</a></h3>
+  <form [formGroup]="registerForm">
+    <div class="justify-content-center">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput
+               formControlName="email">
+      </mat-form-field>
+
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Firstname</mat-label>
+          <input matInput
+                 formControlName="firstname">
+        </mat-form-field>
+
+      </div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>LastName</mat-label>
+          <input matInput
+                 formControlName="lastName">
+        </mat-form-field>
+      </div>
+
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Login</mat-label>
+          <input matInput
+                 formControlName="login">
+        </mat-form-field>
+      </div>
+
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password"
+                 formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm password</mat-label>
+          <input matInput type="password"
+                 formControlName="confirmPassword">
+        </mat-form-field>
+      </div>
+
+      <div id="controls" class="">
+        <button style="width:20%" [disabled]=" registerForm.invalid" (click)="submit()" mat-flat-button color="primary">
+          Registration
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

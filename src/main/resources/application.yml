@@ -1,0 +1,23 @@
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/inst
+    username: postgres
+    password: postgres
+    hikari:
+      username: postgres
+      password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+    generate-ddl: false
+    show-sql: true
+    open-in-view: false
+  liquibase:
+    url: jdbc:postgresql://localhost:5432/inst
+    user: postgres
+    password: postgres
+    change-log: classpath:/db/com/inst/liquibase/inst.xml
+    enabled: true
